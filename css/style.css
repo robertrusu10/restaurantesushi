@@ -375,3 +375,51 @@ h1, h2, h3, .logo {
         line-height: 1.2;
     }
 }
+
+/* ==========================================
+   ELIMINAR SCROLL HORIZONTAL Y FIX FORMULARIO
+   ========================================== */
+
+/* 1. Bloquear el desbordamiento horizontal en todo el sitio */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 768px) {
+
+    /* 2. Arreglar el formulario de reserva en Concepto, Carta y Omakase */
+    form, .form-container, .reserva-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hacer que las filas del formulario pasen a 1 sola columna */
+    .form-row, .form-group-inline, .inputs-inline {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    /* Ajustar todos los campos e inputs al ancho total disponible */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Botón del formulario adaptado */
+    form button, form input[type="submit"], .btn-confirmar {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
