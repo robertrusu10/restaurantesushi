@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sushi | Experiencia Omakase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="header">
+        <a href="index.html" class="logo">Restaurante Sushi | Code By Rusu<span>.</span></a>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="concepto.html">Concepto</a>
+            <a href="carta.html">La Carta</a>
+            <a href="omakase.html" style="color: var(--gold);">Omakase</a>
+        </nav>
+        <div class="header-right">
+            <a href="#reserva" class="btn-reserva-nav">Reservar Mesa</a>
+        </div>
+    </header>
+    <!-- FORMULARIO DE RESERVA -->
+    <section id="reserva" class="booking-section">
+        <div class="booking-container">
+            <div class="section-title" style="margin-bottom: 40px;">
+                <span class="sub-tag">Tu Asiento</span>
+                <h2>Solicitar Reserva</h2>
+            </div>
+            
+            <form class="booking-form" id="kintsugi-booking">
+                <div class="input-group">
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="tel" placeholder="Teléfono de contacto" required>
+                </div>
+                <div class="input-group">
+                    <input type="date" required>
+                    <select required class="custom-select">
+                        <option value="" disabled selected>Número de comensales</option>
+                        <option value="1">1 Persona</option>
+                        <option value="2">2 Personas</option>
+                        <option value="3">3 Personas (Máximo en barra)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Confirmar Experiencia</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECCIÓN OMAKASE -->
+    <section style="padding: 160px 10% 80px; text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="sub-tag">Lo dejo en tus manos</span>
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Menú Omakase</h1>
+        <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 40px;">
+            Un viaje sensorial de 15 pases guiado por nuestro Itamae. El menú cambia a diario en función de la disponibilidad del mejor producto en las lonjas y no admite modificaciones.
+        </p>
+        <h3 style="font-size: 2rem; color: var(--gold); margin-bottom: 50px;">160 € / Persona</h3>
+
+        <div style="background: var(--bg-surface); padding: 40px; border: 1px solid rgba(255,255,255,0.05); text-align: left;">
+            <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px; color: var(--gold);">Normas de la casa</h4>
+            <ul style="color: var(--text-muted); line-height: 1.8; padding-left: 20px; font-size: 0.9rem;">
+                <li>Se ruega estricta puntualidad. El servicio comienza simultáneamente para todos los comensales.</li>
+                <li>No se permite el uso de perfumes intensos para no interferir con los aromas del pescado.</li>
+                <li>Por la naturaleza del menú, no podemos adaptar opciones veganas o para alergias al pescado/marisco.</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>

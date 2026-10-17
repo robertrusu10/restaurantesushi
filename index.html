@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sushi | Code By Rusu</title>
+    <!-- Fuentes de Alta Restauración -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- CABECERA 3 COLUMNAS -->
+    <header class="header">
+        <a href="#" class="logo">Restaurante Sushi | Code By Rusu<span>.</span></a>
+        
+       <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="concepto.html">Concepto</a>
+    <a href="carta.html">La Carta</a>
+    <a href="omakase.html">Omakase</a>
+</nav>
+
+        <div class="header-right">
+            <a href="#reserva" class="btn-reserva-nav">Reservar Mesa</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="sub-tag">Alta Cocina Japonesa</span>
+            <h1>El arte de la precisión efímera.</h1>
+            <p>Ingredientes de subasta diaria en Tokio, técnica ancestral y un respeto absoluto por el producto. Vive la experiencia Omakase.</p>
+            <a href="#menu" class="btn-primary">Descubrir la Carta</a>
+        </div>
+    </section>
+
+    <!-- MENÚ INTERACTIVO (EL RETO TÉCNICO) -->
+    <section id="menu" class="menu-section">
+        <div class="section-title">
+            <span class="sub-tag">Menú</span>
+            <h2>Nuestras Creaciones</h2>
+        </div>
+
+        <!-- Pestañas de navegación del menú -->
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-target="nigiris">Nigiris Especiales</button>
+            <button class="tab-btn" data-target="uramakis">Uramakis de Autor</button>
+            <button class="tab-btn" data-target="bebidas">Sakes & Cócteles</button>
+        </div>
+
+        <!-- Contenido: Nigiris (Activo por defecto) -->
+        <div class="tab-content active" id="nigiris">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80" alt="Nigiri Toro">
+                    <div class="menu-info">
+                        <h3>O-Toro con Caviar Beluga</h3>
+                        <p>Ventresca de atún rojo Balfegó, madurada 15 días, pan de oro y caviar iraní.</p>
+                        <span class="price">18 € / ud</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=600&q=80" alt="Nigiri Wagyu">
+                    <div class="menu-info">
+                        <h3>Wagyu A5 Flameado</h3>
+                        <p>Corte de ternera japonesa de Kagoshima, sopleteado con salsa tare trufada.</p>
+                        <span class="price">22 € / ud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido: Uramakis (Oculto por defecto) -->
+        <div class="tab-content" id="uramakis">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Uramaki Dragón">
+                    <div class="menu-info">
+                        <h3>Golden Dragon Roll</h3>
+                        <p>Anguila glaseada, langostino en tempura, aguacate y perlas de yuzu.</p>
+                        <span class="price">28 €</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80" alt="Spicy Tuna">
+                    <div class="menu-info">
+                        <h3>Volcano Spicy Tuna</h3>
+                        <p>Atún picante, tobiko negro, crujiente de tempura y mayonesa de sésamo tostado.</p>
+                        <span class="price">24 €</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido: Bebidas (Oculto por defecto) -->
+        <div class="tab-content" id="bebidas">
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1516584288019-4806a143a411?auto=format&fit=crop&w=600&q=80" alt="Sake">
+                    <div class="menu-info">
+                        <h3>Dassai 23 Junmai Daiginjo</h3>
+                        <p>El sake más pulido del mundo. Notas florales, melón y un final sedoso.</p>
+                        <span class="price">120 € / Botella</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
