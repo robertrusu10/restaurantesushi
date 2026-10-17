@@ -287,6 +287,91 @@ h1, h2, h3, .logo {
     border-color: var(--gold);
 }
 
+/* ==========================================
+   AJUSTES RESPONSIVE MÓVIL - RESTAURANTE SUSHI
+   ========================================== */
 @media (max-width: 768px) {
-    .input-group { flex-direction: column; gap: 15px; }
+
+    /* 1. SOLUCIÓN AL NAV / HEADER */
+    header, nav, .navbar {
+        position: relative !important; /* Desactiva el fijado para que no tape el texto */
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 10px 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px;
+    }
+
+    /* Reducir el tamaño del título/logo del nav */
+    header h1, header .logo, .brand {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+
+    /* Mostrar enlaces de navegación legibles */
+    nav ul, .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        padding: 0 !important;
+        margin: 5px 0 !important;
+        list-style: none;
+    }
+
+    nav ul li a, .nav-links a {
+        font-size: 0.85rem !important;
+        padding: 4px 8px;
+    }
+
+    /* Botón Reservar Mesa adaptable */
+    .btn-reservar, header button, header .btn {
+        width: auto !important;
+        font-size: 0.8rem !important;
+        padding: 8px 14px !important;
+    }
+
+    /* 2. SOLUCIÓN A LA CARTA / PLATOS (2 COLUMNAS EN MÓVIL) */
+    .carta-container, .menu-grid, .platos-container, .grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 elementos por fila */
+        gap: 12px !important;
+        padding: 10px !important;
+    }
+
+    /* Ajustar las tarjetas individuales */
+    .plato-card, .card, .menu-item {
+        padding: 10px !important;
+        text-align: center;
+    }
+
+    /* Reducir imágenes para que quepan 2 por fila */
+    .plato-card img, .card img, .menu-item img {
+        width: 80px !important;
+        height: 80px !important;
+        object-fit: cover;
+        margin: 0 auto 8px auto;
+    }
+
+    .plato-card h3, .card h3, .menu-item h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 5px;
+    }
+
+    .plato-card p, .card p, .menu-item p {
+        font-size: 0.75rem !important;
+        line-height: 1.2;
+    }
+
+    /* 3. AJUSTE DE LA SECCIÓN HERO / INICIO */
+    .hero, .hero-content {
+        padding-top: 20px !important;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
+    }
 }
