@@ -386,17 +386,135 @@ html, body {
     overflow-x: hidden !important;
 }
 
+/* ============================================================
+   BLOQUE RESPONSIVE COMPLETO PARA MÓVIL (RESTAURANTE SUSHI)
+   ============================================================ */
+
 @media (max-width: 768px) {
 
-    /* 2. Arreglar el formulario de reserva en Concepto, Carta y Omakase */
-    form, .form-container, .reserva-form {
-        width: 100% !important;
+    /* --- 1. ESTRUCTURA GLOBAL Y PREVENCIÓN DE SCROLL HORIZONTAL --- */
+    html, body {
         max-width: 100% !important;
-        padding: 0 15px !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Márgenes globales en todas las secciones para que el texto nunca pegue al borde */
+    section, header, footer, main, container,
+    .hero, .filosofia, .concepto-container, .filosofia-content,
+    .carta-container, .reserva-section, .form-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+
+    /* Párrafos e historias con buen espaciado y legibilidad */
+    p, .filosofia p, section p, .hero p {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+        word-break: break-word !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Títulos principales estilizados */
+    h1, .hero h1, .filosofia h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 15px !important;
+    }
+
+    h2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 12px !important;
+    }
+
+
+    /* --- 2. HEADER Y NAVEGACIÓN (NO FIJO Y COMPACTO) --- */
+    header, nav, .navbar {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    header h1, header .logo, .brand {
+        font-size: 1.25rem !important;
+        text-align: center !important;
+    }
+
+    nav ul, .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        padding: 0 !important;
+        margin: 5px 0 !important;
+        list-style: none !important;
+    }
+
+    nav ul li a, .nav-links a {
+        font-size: 0.85rem !important;
+        padding: 4px 6px !important;
+    }
+
+    .btn-reservar, header button, header .btn {
+        width: auto !important;
+        font-size: 0.8rem !important;
+        padding: 8px 16px !important;
+    }
+
+
+    /* --- 3. CARTA DE PLATOS (GRID DE 2 COLUMNAS EN MÓVIL) --- */
+    .carta-container, .menu-grid, .platos-container, .grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .plato-card, .card, .menu-item {
+        padding: 10px !important;
+        text-align: center !important;
         box-sizing: border-box !important;
     }
 
-    /* Hacer que las filas del formulario pasen a 1 sola columna */
+    .plato-card img, .card img, .menu-item img {
+        width: 75px !important;
+        height: 75px !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        margin: 0 auto 8px auto !important;
+    }
+
+    .plato-card h3, .card h3, .menu-item h3 {
+        font-size: 0.9rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .plato-card p, .card p, .menu-item p {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+
+
+    /* --- 4. FORMULARIO DE RESERVA (1 COLUMNA TOTAL) --- */
+    form, .reserva-form {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 !important;
+    }
+
     .form-row, .form-group-inline, .inputs-inline {
         display: flex !important;
         flex-direction: column !important;
@@ -404,7 +522,6 @@ html, body {
         gap: 10px !important;
     }
 
-    /* Ajustar todos los campos e inputs al ancho total disponible */
     input[type="text"],
     input[type="tel"],
     input[type="email"],
@@ -417,7 +534,6 @@ html, body {
         margin-bottom: 10px !important;
     }
 
-    /* Botón del formulario adaptado */
     form button, form input[type="submit"], .btn-confirmar {
         width: 100% !important;
         box-sizing: border-box !important;
